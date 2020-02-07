@@ -1,0 +1,3 @@
+
+${inputFile:path=Chapters/Sindarin/Sindarin.pillar}$
+${inputFile:path=Chapters/Extensions/Extensions.pillar}$
