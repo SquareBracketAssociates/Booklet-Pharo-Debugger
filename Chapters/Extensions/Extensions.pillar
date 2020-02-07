@@ -26,7 +26,14 @@ extendedDebuggingToolTitle ==> convention method name to retrieve the name of a 
 
 That name is used in the settings and in the
 
-Must implement a setting that defines the order of appearance of the tool view in the right column of the debugger.
+Must implement a setting that defines the order of appearance of the tool view in the right column of the debugger. ==> ==order==
+Muss implement a setting that defines if the tool is active. ==> ==isActivated==
+
+Tools presenters must all declare those variables.
+They could be declared in a super class, for example ==SpPresenter==, but that would prevent users to inherit from other presenter subclasses of ==SpPresenter==.
+
+Additional tool-specific settings can be added by adding corresponding class variables and defining the setting as above.
+
 
 ++EXAMPLE HERE++
 
