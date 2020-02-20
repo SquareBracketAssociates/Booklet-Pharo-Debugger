@@ -10,6 +10,7 @@ Different aspects of the debugger are extendable: the toolbar, contexts menus (s
 The right column extends the debugger with additional tools.
 These tools have access to the debugging model features and state through the Sindarin API (Chapter **Sindarin**).
 They use this API to provide customized, problem-specific actions and views of the debugged execution.
+When a debugging extension is loaded in the system and activated, it automatically appears in the debugger when it opens (if default layouts are used).
 
 ++SCREENSHOT HERE++
 
@@ -55,7 +56,6 @@ StSindarinBytecodeDebuggerPresenter >> setModelBeforeInitialization: aStDebugger
 	stDebugger := aStDebugger.
 	sindarinDebugger := aStDebugger sindarinDebugger
 ]]]
-
 
 
 ""==updatePresenter==.""
