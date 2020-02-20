@@ -22,12 +22,19 @@ These methods are described below:
 
 
 ""==debuggingExtensionToolName==.""
-class side
 [[[
 debuggingExtensionToolName
 	<debuggerExtensionOrder: 2 showByDefault: true>
 	^ 'Bytecode'
 ]]]
+
+
+""==setModelBeforeInitialization: aStDebugger==.""
+
+
+""==updatePresenter==.""
+
+
 
 To do so, the debugger enumerates its extensions and calls the ==updatePresenter== method.
 This method is implemented by ==SpPresenter== and must be reimplemented by all tools.
