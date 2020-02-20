@@ -59,10 +59,18 @@ StSindarinBytecodeDebuggerPresenter >> setModelBeforeInitialization: aStDebugger
 
 
 ""==updatePresenter==.""
+This is an instance-side method.
+When the debugger intercepts an event of interest, the debugger enumerates activated extensions and calls the ==updatePresenter== method on each of them.
+The example below shows the bytecode extension ==updatePresenter== method implementation.
+As it is a method inherited from the spec framework hierarchy, it is recommended to always send that message to super.
 
+[[[
+StSindarinBytecodeDebuggerPresenter >> updatePresenter
+	super updatePresenter.
+	self updateBytecode
+]]]
 
-
-To do so, the debugger enumerates its extensions and calls the ==updatePresenter== method.
+To do so,
 This method is implemented by ==SpPresenter== and must be reimplemented by all tools.
 
 extendedDebuggingToolTitle ==> convention method name to retrieve the name of a tool
