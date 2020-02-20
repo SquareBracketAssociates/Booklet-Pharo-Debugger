@@ -24,7 +24,7 @@ For instance, when a ==doesNotUnderstand== exception is raised (''i.e.'', a meth
 In that case, it gives users the possibility to create the missing method and continue the execution.
 
 ""The status line.""
-This view provides information about the current code being executed.
+This view provides information about the current context.
 Non-critical information, such as the current instruction being stepped, are displayed in gray.
 Critical information ,such as halts or breakpoints or DNU exceptions, are displayed in red.
 
