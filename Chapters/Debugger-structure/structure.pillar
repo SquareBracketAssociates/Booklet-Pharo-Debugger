@@ -35,8 +35,24 @@ This position corresponds to the next execution that will be executed if a step 
 It is coloured in blue if that instruction is selected in the source code, or in orange and underlined if the selection is empty.
 
 A context menu (through right click) provides inspection, exploration, and stepping actions applicable to the context.
-Such actions include, ''e.g.'', browse implementors of a selected message or skip execution of selected parts of the code. 
+Such actions include, ''e.g.'', browse implementors of a selected message or skip execution of selected parts of the code.
 
+""The inspector.""
+It provides views on the current context.
+It contains tabs with different inspections or views on the current context or on the system.
+
+The raw inspection shows three items: ''Receiver'', ''Temps'' and ''Context''.
+The receiver item shows information about the receiver of the message, or the object executing the method from the context.
+The temps item shows the temporary variables of the current context.
+Finally, the context item shows lower-level details, such as the interrupted context, the debug session or the debugger itself.
+Double-clicking on an item will spawn a new view in the same inspector, with an inspection on the selected item.
+
+The breakpoints inspection shows all breakpoints installed for the current receiver.
+Those breakpoints are either installed on the receiver's class (''e.g.'', halts) or on that specific receiver (''i.e.'', object-centric breakpoints or halts.)
+Ticking or unticking a breakpoint in that list will activate or deactivate that breakpoint.
+
+The meta inspection shows methods of the receiver's class hierarchy.
+Methods can be modified and saved in directly in that pane.
 
 +Debugger views, vertical layout>file://images/debugger-structure.png+
 +Debugger views, horizontal layout>file://images/debugger-structure-2.png+
