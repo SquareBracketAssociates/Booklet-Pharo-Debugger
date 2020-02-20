@@ -28,6 +28,14 @@ This view provides information about the current context.
 Non-critical information, such as the current instruction being stepped, are displayed in gray.
 Critical information ,such as halts or breakpoints or DNU exceptions, are displayed in red.
 
+""The code.""
+The code pane shows the source code of the interrupted context's method.
+The source code is annotated with informations about the position of the interrupted execution.
+This position corresponds to the next execution that will be executed if a step action is performed.
+It is coloured in blue if that instruction is selected in the source code, or in orange and underlined if the selection is empty.
+
+A context menu (through right click) provides inspection, exploration, and stepping actions applicable to the context.
+Such actions inculde, ''e.g.'', browse implementors of a selected message or skip execution of selected parts of the code. 
 
 
 +Debugger views, vertical layout>file://images/debugger-structure.png+
