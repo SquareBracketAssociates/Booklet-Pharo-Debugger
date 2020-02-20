@@ -22,7 +22,7 @@ These methods are described below:
 
 
 ""==debuggingExtensionToolName==.""
-This is a class side method containing a specific pragma that defines the presenter as an extension.
+This is a class-side method containing a specific pragma that defines the presenter as an extension.
 This method must return a string that will be the title of the extension tab in the debugger.
 An example is shown in the following script for the bytecode extension of the debugger.
 
@@ -41,8 +41,21 @@ Once the pragma defined in this method, these two parameters automatically appea
 An additional setting named ''activate debugger extensions'' switches on and off all debugger extensions.
 
 
-
 ""==setModelBeforeInitialization: aStDebugger==.""
+This is an instance-side method.
+It is automatically called by the debugger when instantiating the extension view before initializing it.
+It passes a model as parameter, that is always the current debugger for which the extension view is instantiated.
+That method must, if needed, use the debugger to retrieve whatever model the extension needs.
+For example (see code below), the bytecode extension needs the debugger itself and an instance of a Sindarin debugger to script the execution.
+Developers must implement the needed instance variables and methods for each extension accordingly.
+
+[[[
+StSindarinBytecodeDebuggerPresenter >> setModelBeforeInitialization: aStDebugger
+	"My original model is the debugger presenter that I extend"
+	stDebugger := aStDebugger.
+	sindarinDebugger := aStDebugger sindarinDebugger
+]]]
+
 
 
 ""==updatePresenter==.""
