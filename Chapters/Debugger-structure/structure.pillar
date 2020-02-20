@@ -6,6 +6,13 @@ Default views are the stack, the commands, the status line, the code pane and th
 An extension view automatically appears if any debugging extension is present and if extensions are activated in the settings.
 If not, extensions do not appear.
 
+Default and extension views are available in a vertical and an horizontal layout.
+It is configureable in the settings under ==Tools >> Debugging >> Debugger layout==.
+It is possible to fully customize the debugger layout, and therefore to add or remove any view.
+The customized layout must then me selected in the aforementioned setting to be set as default.
+To appear in that setting's list of possible values, the layout must be implemented in a method under the ==specs= protocol of the ==StDebugger== class side.
+
+
 ""The stack.""
 It shows the call stack of the current interrupted context.
 Each element in the stack is a context representing a message send.
