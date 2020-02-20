@@ -22,11 +22,24 @@ These methods are described below:
 
 
 ""==debuggingExtensionToolName==.""
+This is a class side method containing a specific pragma that defines the presenter as an extension.
+This method must return a string that will be the title of the extension tab in the debugger.
+An example is shown in the following script for the bytecode extension of the debugger.
+
 [[[
-debuggingExtensionToolName
+StSindarinBytecodeDebuggerPresenter class >> debuggingExtensionToolName
 	<debuggerExtensionOrder: 2 showByDefault: true>
 	^ 'Bytecode'
 ]]]
+
+The pragma actually enables instances of that presenter to be used as a debugger extension.
+It has two parameters:
+- the order in which the view will appear in the debugger extension column tabs
+- a boolean that shows or not the extension by default in the debugger
+
+Once the pragma defined in this method, these two parameters automatically appear in the settings under ==Tools >> Debugging >> Debugger Extensions==.
+An additional setting named ''activate debugger extensions'' switches on and off all debugger extensions.
+
 
 
 ""==setModelBeforeInitialization: aStDebugger==.""
