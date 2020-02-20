@@ -16,7 +16,7 @@ By default, only a small part of the stack is shown.
 More of the stack is observable by either clicking on the bottom context (the last in the stack) or through the context menu.
 
 ""Commands.""
-Commands are actions applicable to the current execution being debugged.
+Commands are actions applicable to the current context
 After each debugging action (''e.g.'', a step), the list of commands is being updated.
 New commands may appear or disappear.
 It depends if they are applicable or not to the current context and debugging session.
