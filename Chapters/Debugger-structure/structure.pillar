@@ -6,10 +6,20 @@ Default views are the stack, the commands, the status line, the code pane and th
 An extension view automatically appears if any debugging extension is present and if extensions are activated in the settings.
 If not, extensions do not appear.
 
+""Commands.""
+Commands are actions applicable to the current execution being debugged.
+After each debugging action (''e.g.'', a step), the list of commands is being updated.
+New commands may appear or disappear.
+It depends if they are applicable or not to the current context and debugging session.
+For instance, when a ==doesNotUnderstand== exception is raised (''i.e.'', a method does not exist), the command ''createMethod'' will appear.
+In that case, it gives users the possibility to create the missing method and continue the execution.
+
 ""The status line.""
 This view provides information about the current code being executed.
 Non-critical information, such as the current instruction being stepped, are displayed in gray.
 Critical information ,such as halts or breakpoints or DNU exceptions, are displayed in red.
+
+
 
 +Debugger views, vertical layout>file://images/debugger-structure.png+
 +Debugger views, horizontal layout>file://images/debugger-structure-2.png+
