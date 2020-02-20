@@ -1,6 +1,12 @@
 !!Structure of the Pharo debugger
 
 !!!Sub-presenters and layouts
+The debugger is composed of default views and extension views.
+Default views are the stack, the commands, the status line, the code pane and the inspector.
+An extension view automatically appears if any debugging extension is present and if extensions are activated in the settings.
+If not, extensions do not appear.
+
+
 
 +Debugger views, vertical layout>file://images/debugger-structure.png+
 +Debugger views, horizontal layout>file://images/debugger-structure-2.png+
