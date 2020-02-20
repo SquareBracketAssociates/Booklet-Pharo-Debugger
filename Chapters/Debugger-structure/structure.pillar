@@ -1,8 +1,9 @@
 !!Structure of the Pharo debugger
 
-!!!Subpresenters
+!!!Sub-presenters and layouts
 
-!!!Layouts
++Debugger views, vertical layout>file://images/debugger-structure.png+
++Debugger views, horizontal layout>file://images/debugger-structure-2.png+
 
 !!!Settings
 
