@@ -70,7 +70,7 @@ StSindarinBytecodeDebuggerPresenter >> updatePresenter
 	self updateBytecode
 ]]]
 
-!!!!Interaction between a tool extension and the extended debugger
+!!!!Interaction between debugging extensions and the debugger
 
 Tools extensions are instantiated and registered by the debugger.
 When the debugger is updated, ''e.g.'', while a single step has been performed, all registered tools are notified of that update.
